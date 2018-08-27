@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>bapcode4linux</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>
+        <div id="inputs-body">
+            <form action="sendData" method="post" id="forms" enctype="application/x-www-form-urlencoded">
+                <div class="flex-outer">
+                    <ul class="flex-inner">
+                            <li>
+                                <label for="f1">RCSP_PERFORM_ADDITIONAL_CHECKS</label>
+                                <input type="checkbox" name="field1" id="f1" value="1" class="checkboxes">
+                            </li>
+                            <li>
+                                <label for="f2">SUPPORT_ELEM_SETS_ON_ARCS</label>
+                                <input type="checkbox" name="field2" id="f2" value="1" class="checkboxes">   
+                            </li> 
+                            <li>
+                                <label for="f3">SUPPORT_DISCRETE_CASE</label>
+                                <input type="checkbox" name="field3" id="f3" value="1" class="checkboxes">
+                            </li>
+                            <li>
+                                <label for="f4">SUPPORT_SIMPLE_PRICING</label>
+                                <input type="checkbox" name="field4" id="f4" value="1" class="checkboxes">   
+                            </li>
+                            <li>
+                                <label for="f5">SUPPORT_VARS_ASSOCIATED_WITH_RES_CONSUMPTION</label>
+                                <input type="checkbox" name="field5" id="f5" value="1" class="checkboxes">
+                            </li>
+                            <li>
+                                <label for="f6">SUPPORT_SPECIAL_RESOURCES</label>
+                                <input type="checkbox" name="field6" id="f6" value="1" class="checkboxes">   
+                            </li> 
+                            <li>
+                                <label for="f7">SUPPORT_HEUR_EVAL_FUNCTOR</label>
+                                <input type="checkbox" name="field7" id="f7" value="1" class="checkboxes">
+                            </li>
+                            <li>
+                                <label for="f8">USE_RANK1_COVERING_CUTS</label>
+                                <input type="checkbox" name="field8" id="f8" value="1" class="checkboxes">   
+                            </li>  
+                            <input type="submit" value="COMPILE" id="compileBtn" methods>
+                    </ul> 
+                </div>
+                            
+                
+
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

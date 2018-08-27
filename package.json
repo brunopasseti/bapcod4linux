@@ -1,0 +1,22 @@
+{
+  "name": "bapcode4linux",
+  "version": "1.0.0",
+  "description": "tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "launch": "node index.js"
+  },
+  "author": "brunopasseti",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "passport": "^0.4.0",
+    "passport-http": "^0.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.3"
+  }
+}

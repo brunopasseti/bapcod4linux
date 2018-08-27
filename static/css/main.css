@@ -1,0 +1,101 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #DDD;
+    font-size: 10pt;
+}
+
+.flex-outer{
+    height: 97vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.flex-inner{
+    border: 1px transparent;
+    height: 90vh;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0;
+}
+.flex-inner>li{
+    list-style-type: none;
+}
+
+#compileBtn {
+    background-color: rgb(25, 37, 204); /* Green */
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}
+
+
+/* DOWNLOAD LINK PAGE */
+
+.wrapper{
+    display: flex;
+    height: 97vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.elements{
+    height: 90vh;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0;
+    font-size:24pt;
+}
+
+.loader {
+    border: 16px solid #FFF;
+    border-top: 16px solid rgb(25, 37, 204);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* LOGIN PAGE */
+#login {
+    background-color: rgb(25, 37, 204); /* Green */
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}
+
+/* MEDIA QUERRY */
+
+@media screen and (max-width: 1300px) {
+    .flex-inner>li {
+        font-size: 7.5pt;
+    }
+    .flex-inner {
+        height: 84vh;
+        width: 84vw;
+        display: flex;
+    }
+}
+
