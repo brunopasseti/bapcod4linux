@@ -1,13 +1,16 @@
 //Router
 const express = require('express');
-//Urlencoded request handling
-const bodyParser = require('body-parser');
 //Executing python code
 const exec = require('child_process').execSync;
 //Auth
 const passport = require('passport');
 const Strategy = require('passport-http').BasicStrategy;
-let db = require('./db');
+const db = require('./db');
+
+const app = express();
+app.use(express.static('static'));
+app.use(express.urlencoded({extended: true}));
+let port = 3000;
 
 passport.use(new Strategy(
     function(username, password, cb) {
@@ -19,36 +22,18 @@ passport.use(new Strategy(
       });
     }));
 
+let cmd = "python3 ./run.py"
+app.post('/sendData',function (req, res) {
 
-
-
-const app = express();
-
-
-
-
-let cmd = "python3 ./test.py"
-app.use(express.static('static'));
-app.use(express.urlencoded({extended: true}));
-
-app.post('/sendData', function (req, res) {
     let form = req.body;
     let arg = CreateArg(form);
-    exec(cmd + " " + arg, function(error, stdout, stderr) {
-        // console.log(stderr);
-        // console.log(stdout);
-    });
-    res.sendFile(__dirname + "/static/dl.html");
+    
+    exec(cmd + " " + arg);
 
+    res.redirect('/dl.html')
 })
 
-app.get('/login',
-  passport.authenticate('basic', { session: false, successRedirect: 'compile.html'}),
-  function(req, res) {
-    res.sendFile(__dirname + "/static/compile.html");
-  });
-
-app.listen(3000, () => console.log('Example app listening on port 3000!'))
+app.listen(port, () => console.log(`Example app listening on port ${port}!`))
 
 function CreateArg(formObj){
     let arg = "";
